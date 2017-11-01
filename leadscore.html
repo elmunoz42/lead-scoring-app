@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/leadscoringstyles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-3.1.1.js"></script>
+    <script src="js/leadscoringscript.js"></script>
+    <title>Lead Scoring App</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row" id="top-row">
+        <div class="col-md-4">
+
+        </div>
+        <!-- image column -->
+        <div class="col-md-8" id="title">
+          <h2>CloudEngage's Very Own Lead Scoring App (local 1.0)</h2>
+
+        </div>
+        <!-- title column -->
+      </div>
+      <!-- row -->
+      <div class="row">
+        <div class="col-md-4">
+          <div class="jumbotron" id="orange">
+            <form id="order-form">
+
+                <h3>Lead Computation</h3>
+                <label>Contact Name?</label>
+                <input id="contact-name" type="text" name="" value="unknown"></input>
+                <label>Organization Name?</label>
+                <input id="org-name" type="text" name="" value="unknown"></input>
+                <label>What role does the lead have at organization?</label>
+                <select id="lead-role" class="form-control">
+                  <option name="CEO" value="40">CEO or ED</option>
+                  <option name="VP of Sales" value="30">VP of Sales</option>
+                  <option name="Manager" value="10">Manager</option>
+                  <option name="Digital Marketing" value="10">Digital Marketing Associate</option>
+                  <option name="Gate Keeper" value="5">Gate Keeper</option>
+                  <option name="Unknown" value="0">Unknown</option>
+                </select>
+
+                <label>What's the organizations vertical?</label>
+                <select id="industry" class="form-control">
+                  <option name="Automotive" value="15" >Automotive</option>
+                  <option name="Retail" value="15">Retail</option>
+                  <option name="Tourism" value="10">Tourism</option>
+                  <option name="Utilities" value="10">Utilities</option>
+                  <option name="Hospitality" value="10">Hospitality</option>
+                  <option name="Other" value="0">Other</option>
+                </select>
+                <label>How many employees do they have?</label>
+                <select id="company-size" class="form-control">
+                  <option name="Over 200 employees" value="40">Over 200 employees</option>
+                  <option name="50-200 employees" value="30">50-200 employees</option>
+                  <option name="10-50 employees" value="20">10-50 employees</option>
+                  <option name="5-10 employees" value="10">5-10 employees</option>
+                  <option name="1-5 employees" value="5">5-10 employees</option>
+                  <option name="Unknown" value="0">Unknown</option>
+                </select>
+                <label>What's their implementation timeline?</label>
+                <select id="timeline" class="form-control">
+                  <option name="Need a solution soon" value="30">Need a solution soon</option>
+                  <option name="Need a solution next quarter" value="20">Open to a solution next quarter</option>
+                  <option name="Not interested at the moment" value="-10">Not interested at the moment</option>
+                  <option name="Unknown"value="0">Unknown</option>
+                </select>
+                <label>What's their implicit engagement number between 1-50</label>
+                <input id="engagement" type="text" value="0"></input>
+                <hr>
+
+              <button type="submit" class="btn" name="button">Create Lead Score</button>
+            </form>
+            <!-- order-form -->
+
+          </div>
+          <!-- jumbotron -->
+        </div>
+        <!-- left column -->
+        <div class="col-md-8" >
+          <div class="jumbotron" id="green">
+            <h3>Prospect Info For Hubspot:</h3>
+            <ul>
+              <p >Contact Name: <span id="name-output"></span></p>
+              <p >Company Name: <span id="company-output"></span></p>
+              <li >Role: <span id="role-output"></span></li>
+              <li >Vertical: <span id="vertical-output"></span></li>
+              <li >Number of Employees: <span id="size-output"></span></li>
+              <li >Timeline: <span id="timeline-output"></span></li>
+              <li >Engagement Score: <span id="engagement-output"></span></li>
+              <li >Total Score <span id="score-output"></span></li>
+            </ul>
+            <p ></p>
+
+          </div>
+          <!-- jumbotron -->
+        </div>
+        <!-- right column -->
+        <div class="col-md-8">
+          <div class="jumbotron" id="red">
+            <h3>Score:</h3>
+            <h4 id="total"></h4>
+            <div class="checkout-box">
+
+              <!-- payment-info -->
+            </div>
+            <!-- checkout-box -->
+          </div>
+          <!-- jumbotron -->
+        </div>
+        <!-- column total and checkout -->
+      </div>
+      <!-- row 1 -->
+    </div>
+    <!-- container -->
+  </body>
+</html>
