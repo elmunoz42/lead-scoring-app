@@ -15,7 +15,7 @@
         </div>
         <!-- image column -->
         <div class="col-md-8" id="title">
-          <h2>CloudEngage's Very Own Lead Scoring App (local 1.0)</h2>
+          <h2>CloudEngage's Very Own Lead Scoring App (V1.1)</h2>
 
         </div>
         <!-- title column -->
@@ -35,8 +35,9 @@
                 <select id="lead-role" class="form-control">
                   <option name="CEO" value="40">CEO or ED</option>
                   <option name="VP of Sales" value="30">VP of Sales</option>
+                  <option name="General Sales Manager" value="20">General Sales Manager</option>
+                  <option name="Digital Marketing" value="20">Digital Marketing Associate</option>
                   <option name="Manager" value="10">Manager</option>
-                  <option name="Digital Marketing" value="10">Digital Marketing Associate</option>
                   <option name="Gate Keeper" value="5">Gate Keeper</option>
                   <option name="Unknown" value="0">Unknown</option>
                 </select>
@@ -66,7 +67,15 @@
                   <option name="Not interested at the moment" value="-10">Not interested at the moment</option>
                   <option name="Unknown"value="0">Unknown</option>
                 </select>
-                <label>What's their implicit engagement number between 1-50</label>
+
+                <input id="emailOpen" type="checkbox" name="email opened" value="10">Email Opened (10)<br>
+                <input id="websiteVisit" type="checkbox" name="website visit" value="10">Website Visit (10)<br>
+                <input id="blogPostRead" type="checkbox" name="blog post read" value="10">Blog Post Read (10)<br>
+                <input id="whitePaperDownload" type="checkbox" name="white paper download" value="20">White Paper (20) Download</br>
+                <input id="positiveResponse" type="checkbox" name="positive response" value="30">Positive Response (30) </br>
+                <input id="answeredCall" type="checkbox" name="answered call" value="20">Answered Call (20)</br>
+                <input id="leadReachedOutByEmailPhone" type="checkbox" name="lead reached out by phone/email" value="40">Lead reached out by phone or email (40)<br>
+                <label>Additional engagement number</label>
                 <input id="engagement" type="text" value="0"></input>
                 <hr>
 
@@ -82,14 +91,14 @@
           <div class="jumbotron" id="green">
             <h3>Prospect Info For Hubspot:</h3>
             <ul>
-              <p >Contact Name: <span id="name-output"></span></p>
-              <p >Company Name: <span id="company-output"></span></p>
-              <li >Role: <span id="role-output"></span></li>
-              <li >Vertical: <span id="vertical-output"></span></li>
-              <li >Number of Employees: <span id="size-output"></span></li>
-              <li >Timeline: <span id="timeline-output"></span></li>
-              <li >Engagement Score: <span id="engagement-output"></span></li>
-              <li >Total Score <span id="score-output"></span></li>
+              <p >Contact Name: <span class="name-output"></span></p>
+              <p >Company Name: <span class="company-output"></span></p>
+              <li >Role: <span class="role-output"></span></li>
+              <li >Vertical:<span class="vertical-output"></span></li>
+              <li >Number of Employees: <span class="size-output"></span></li>
+              <li >Timeline: <span class="timeline-output"></span></li>
+              <li >Engagement Score: <span class="engagement-output"></span></li>
+              <li >Total Score: <span class="score-output"></span></li>
             </ul>
             <p ></p>
 
@@ -100,7 +109,7 @@
         <div class="col-md-8">
           <div class="jumbotron" id="red">
             <h3>Score:</h3>
-            <h4 id="total"></h4>
+            <h4 class="total"></h4>
             <div class="checkout-box">
 
               <!-- payment-info -->
@@ -108,11 +117,36 @@
             <!-- checkout-box -->
           </div>
           <!-- jumbotron -->
+        <div class="jumbotron">
+          <table>
+            <tr>
+              <th>Contact Name:</th>
+              <th>Company Name:</th>
+              <th>Role:</th>
+              <th>Vertical:</th>
+              <th>Number of Employees:</th>
+              <th>Timeline:</th>
+              <th>Engagement Score:</th>
+              <th>Total Score:</th>
+            </tr>
+            <tr>
+              <td class="name-output"></td>
+              <td class="company-output"></td>
+              <td class="role-output"></td>
+              <td class="vertical-output"></td>
+              <td class="size-output"></td>
+              <td class="timeline-output"></td>
+              <td class="engagement-output"></td>
+              <td class="score-output"></td>
+            </tr>
+          </table>
         </div>
-        <!-- column total and checkout -->
+      </div>
+      <!-- column total and checkout -->
       </div>
       <!-- row 1 -->
     </div>
     <!-- container -->
+    <iframe src="https://docs.google.com/spreadsheets/d/1QTDam0EQbYJvFYOsCOUOkQcahRUoHUV9_rk49mog4po/edit#gid=1575311997" width="90%" height="600px"></iframe>
   </body>
 </html>

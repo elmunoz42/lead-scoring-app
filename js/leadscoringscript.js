@@ -36,13 +36,11 @@ function receiptMaker (orderArray) {
 $(document).ready(function() {
 
 
-  // $("#new-order").click(function(event))
-  ///submit///
+
+  ///submit event///
   $("form#order-form").submit(function(event) {
     event.preventDefault();
 
-
-    // lead-role industry company-size timeline
     ///Input///
     var contactName=$("#contact-name").val();
     var orgName=$("#org-name").val();
@@ -50,19 +48,51 @@ $(document).ready(function() {
     var industry=$("#industry").find('option:selected').attr("name");
     var companySize=$("#company-size").find('option:selected').attr("name");
     var timeline=$("#timeline").find('option:selected').attr("name");
-    var engagement=$("#engagement").val();
-    var score = parseInt($("#lead-role").val()) + parseInt($("#industry").val()) + parseInt($("#company-size").val()) + parseInt($("#timeline").val()) + parseInt($("#engagement").val());
+    var emailOpen=0;
+    if ($("#emailOpen").is(':checked')){
+      emailOpen=$('#emailOpen').val();
+    }
+    var websiteVisit=0;
+    if ($("#websiteVisit").is(':checked')){
+      websiteVisit=$('#websiteVisit').val();
+    }
+    var blogPostRead=0;
+    if ($("#blogPostRead").is(':checked')){
+      blogPostRead=$('#blogPostRead').val();
+    }
+    var whitePaperDownload=0;
+    if ($("#whitePaperDownload").is(':checked')){
+      whitePaperDownload=$('#whitePaperDownload').val();
+    }
+    var positiveResponse=0;
+    if ($("#positiveResponse").is(':checked')){
+      positiveResponse=$('#positiveResponse').val();
+    }
+    var answeredCall=0;
+    if ($("#answeredCall").is(':checked')){
+      answeredCall=$('#answeredCall').val();
+    }
+    var leadReachedOutByEmailPhone=0
+    if ($("#leadReachedOutByEmailPhone").is(':checked')){
+      leadReachedOutByEmailPhone=$('#leadReachedOutByEmailPhone').val();
+    }
 
+    // emailOpen websiteVisit blogPostRead whitePaperDownload positiveResponse answeredCall leadReachedOutByEmailPhone
 
-    $("#name-output").text(contactName);
-    $("#company-output").text(orgName);
-    $("#role-output").text(leadRole);
-    $("#vertical-output").text(industry);
-    $("#size-output").text(companySize);
-    $("#timeline-output").text(timeline);
-    $("#engagement-output").text(engagement);
-    $("#score-output").text(score);
-    $("#total").text(score);
+    var engagement=  parseInt(emailOpen) + parseInt(websiteVisit) + parseInt(blogPostRead) + parseInt(whitePaperDownload) + parseInt(positiveResponse) + parseInt(answeredCall) + parseInt(leadReachedOutByEmailPhone) + parseInt($("#engagement").val());
+
+    var score = parseInt($("#lead-role").val()) + parseInt($("#industry").val()) + parseInt($("#company-size").val()) + parseInt($("#timeline").val()) + engagement;
+
+    // Output
+    $(".name-output").text(contactName);
+    $(".company-output").text(orgName);
+    $(".role-output").text(leadRole);
+    $(".vertical-output").text(industry);
+    $(".size-output").text(companySize);
+    $(".timeline-output").text(timeline);
+    $(".engagement-output").text(engagement);
+    $(".score-output").text(score);
+    $(".total").text(score);
 
   });
 });
