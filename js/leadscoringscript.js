@@ -1,7 +1,9 @@
 //business logic
 
 ////LeadObjectMaker ////
-function LeadObjectMaker (employeeNumber, roleType, industry, timeline, score) {
+function Lead (leadName, organizationName, employeeNumber, roleType, industry, timeline, engagement, score) {
+  this.leadName=leadName;
+  this.organizationName=organizationName;
   this.employeeNumber=employeeNumber;
   this.roleType= roleType;
   this.industry= industry;
@@ -9,33 +11,13 @@ function LeadObjectMaker (employeeNumber, roleType, industry, timeline, score) {
   this.engagement= engagement;
   this.score=score;
 }
-//// leadMath/////
-LeadObjectMaker.prototype.leadMath = function (roleType){
-  if (roleType==="CEO") {
-    return 8 + (this.industry.length * 2) + (this.timeline.length * 3);
-  }
-  else {
-    return 10 + (this.industry.length * 2) + (this.timeline.length * 3);
 
-  }
-}
+// NOTE: ADD YOUR DATABASE SAVING METHOD HERE //
 
-/////receipt maker////
-function receiptMaker (orderArray) {
-  if (orderArray.length === 1) {
-    return orderArray[0];
-  }
-  else if (orderArray.length >1 ) {
-    return orderArray.join("\n");
-  }
-}
-
-
+//
 
 // user interface logic
 $(document).ready(function() {
-
-
 
   ///submit event///
   $("form#order-form").submit(function(event) {
@@ -82,6 +64,15 @@ $(document).ready(function() {
     var engagement=  parseInt(emailOpen) + parseInt(websiteVisit) + parseInt(blogPostRead) + parseInt(whitePaperDownload) + parseInt(positiveResponse) + parseInt(answeredCall) + parseInt(leadReachedOutByEmailPhone) + parseInt($("#engagement").val());
 
     var score = parseInt($("#lead-role").val()) + parseInt($("#industry").val()) + parseInt($("#company-size").val()) + parseInt($("#timeline").val()) + engagement;
+
+    leadName, organizationName, employeeNumber, roleType, industry, timeline, engagement, score
+
+    var newLead = new Lead(contactName, organizationName, employeeNumber, leadRole, industry, timeline, engagement, score);
+
+    // NOTE: IMPLEMENT YOUR DATABASE SAVING METHOD HERE FOR THE newLead ...
+
+
+    //
 
     // Output
     $(".name-output").text(contactName);

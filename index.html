@@ -10,23 +10,21 @@
   <body>
     <div class="container">
       <div class="row" id="top-row">
-        <div class="col-md-4">
+        <h2>Super Simple Lead Scoring App</h2>
 
-        </div>
-        <!-- image column -->
-        <div class="col-md-8" id="title">
-          <h2>CloudEngage's Very Own Lead Scoring App (V1.1)</h2>
+        <h4>You can find the repository on <a href="https://github.com/elmunoz42/lead-scoring-app/">my github</a>, there you can modify the code to properly save leads directly into your CRM or database. Otherwise just copy paste the results into your spreadsheet or CRM manually.</h4>
+        <h4>If you want to change the weight of the answers just change the "value" of the options on the index.html file.</h4>
+        <h4>For other hacky sales/marketing/entrepreneurship solutions check out <a href="https://cloudengage.com/resources/blog/"> --> my blog!!!!</a></h4>
 
-        </div>
         <!-- title column -->
       </div>
       <!-- row -->
       <div class="row">
         <div class="col-md-4">
-          <div class="jumbotron" id="orange">
+          <div class="jumbotron" id="gray">
             <form id="order-form">
 
-                <h3>Lead Computation</h3>
+                <h3>Lead Form</h3>
                 <label>Contact Name?</label>
                 <input id="contact-name" type="text" name="" value="unknown"></input>
                 <label>Organization Name?</label>
@@ -46,10 +44,11 @@
                 <select id="industry" class="form-control">
                   <option name="Automotive" value="15" >Automotive</option>
                   <option name="Retail" value="15">Retail</option>
-                  <option name="Tourism" value="10">Tourism</option>
-                  <option name="Utilities" value="10">Utilities</option>
-                  <option name="Hospitality" value="10">Hospitality</option>
-                  <option name="Other" value="0">Other</option>
+                  <option name="Tourism" value="15">Tourism</option>
+                  <option name="Utilities" value="15">Utilities</option>
+                  <option name="Hospitality" value="15">Hospitality</option>
+                  <option name="Other" value="15">Other</option>
+                  <option name="Unknown" value="0">Unknown</option>
                 </select>
                 <label>How many employees do they have?</label>
                 <select id="company-size" class="form-control">
@@ -77,7 +76,6 @@
                 <input id="leadReachedOutByEmailPhone" type="checkbox" name="lead reached out by phone/email" value="40">Lead reached out by phone or email (40)<br>
                 <label>Additional engagement number</label>
                 <input id="engagement" type="text" value="0"></input>
-                <hr>
 
               <button type="submit" class="btn" name="button">Create Lead Score</button>
             </form>
@@ -88,8 +86,8 @@
         </div>
         <!-- left column -->
         <div class="col-md-8" >
-          <div class="jumbotron" id="green">
-            <h3>Prospect Info For Hubspot:</h3>
+          <div class="jumbotron" id="gray">
+            <h3>Prospect Info and Score:</h3>
             <ul>
               <p >Contact Name: <span class="name-output"></span></p>
               <p >Company Name: <span class="company-output"></span></p>
@@ -107,7 +105,7 @@
         </div>
         <!-- right column -->
         <div class="col-md-8">
-          <div class="jumbotron" id="red">
+          <div class="jumbotron" id="gray">
             <h3>Score:</h3>
             <h4 class="total"></h4>
             <div class="checkout-box">
@@ -117,7 +115,9 @@
             <!-- checkout-box -->
           </div>
           <!-- jumbotron -->
-        <div class="jumbotron">
+        <div class="jumbotron" class="gray">
+          <h3>Table View For Pasting Into Spreadsheet</h3>
+          <br>
           <table>
             <tr>
               <th>Contact Name:</th>
@@ -147,6 +147,5 @@
       <!-- row 1 -->
     </div>
     <!-- container -->
-    <iframe src="https://docs.google.com/spreadsheets/d/1QTDam0EQbYJvFYOsCOUOkQcahRUoHUV9_rk49mog4po/edit#gid=1575311997" width="90%" height="600px"></iframe>
   </body>
 </html>
