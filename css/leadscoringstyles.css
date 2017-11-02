@@ -3,6 +3,10 @@ body {
   background-color: lightgrey;
 
 }
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
 .jumbotron {
   border-radius: 0px;
 }

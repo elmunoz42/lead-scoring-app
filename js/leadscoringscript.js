@@ -65,9 +65,7 @@ $(document).ready(function() {
 
     var score = parseInt($("#lead-role").val()) + parseInt($("#industry").val()) + parseInt($("#company-size").val()) + parseInt($("#timeline").val()) + engagement;
 
-    leadName, organizationName, employeeNumber, roleType, industry, timeline, engagement, score
-
-    var newLead = new Lead(contactName, organizationName, employeeNumber, leadRole, industry, timeline, engagement, score);
+    var newLead = new Lead(contactName, orgName, companySize, leadRole, industry, timeline, engagement, score);
 
     // NOTE: IMPLEMENT YOUR DATABASE SAVING METHOD HERE FOR THE newLead ...
 
