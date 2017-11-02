@@ -81,7 +81,7 @@ $(document).ready(function() {
     $(".timeline-output").text(timeline);
     $(".engagement-output").text(engagement);
     $(".score-output").text(score);
-    $(".total").text(score);
+  
 
   });
 });
