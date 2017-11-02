@@ -12,7 +12,7 @@ function Lead (leadName, organizationName, employeeNumber, roleType, industry, t
   this.score=score;
 }
 
-// NOTE: ADD YOUR DATABASE SAVING METHOD HERE //
+// NOTE: ADD YOUR DATABASE/CRM API SAVING METHOD HERE //
 
 //
 
@@ -81,7 +81,7 @@ $(document).ready(function() {
     $(".timeline-output").text(timeline);
     $(".engagement-output").text(engagement);
     $(".score-output").text(score);
-  
+
 
   });
 });
