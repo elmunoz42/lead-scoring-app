@@ -12,9 +12,19 @@ function Lead (leadName, organizationName, employeeNumber, roleType, industry, t
   this.score=score;
 }
 
+
 // NOTE: ADD YOUR DATABASE/CRM API SAVING METHOD HERE //
 
 //
+
+// Copy to clipboard function
+function copyToClipboard(element) {
+  var $temp = $("<input>");
+  $("body").append($temp);
+  $temp.val($(element).text()).select();
+  document.execCommand("copy");
+  $temp.remove();
+}
 
 // user interface logic
 $(document).ready(function() {

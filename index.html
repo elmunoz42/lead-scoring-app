@@ -89,6 +89,7 @@
       <div class="col-md-8" >
         <div class="jumbotron" id="gray">
           <h3>Prospect Info and Score:</h3>
+          <div id="prospect-for-hubspot">
           <ul>
             <p>Contact Name: <span class="name-output"></span></p>
             <p>Company Name: <span class="company-output"></span></p>
@@ -97,8 +98,12 @@
             <li>Number of Employees: <span class="size-output"></span></li>
             <li>Timeline: <span class="timeline-output"></span></li>
             <li>Engagement Score: <span class="engagement-output"></span></li>
-            <li><strong>Total Lead Score:</strong> <span class="score-output"></span></li>
+            <li><strong>Total Lead Score:</strong> <span class="score-output" id="score-only"></span></li>
           </ul>
+
+          </div>
+          <button onclick="copyToClipboard('#prospect-for-hubspot')">Copy to Clipboard</button>
+          <button onclick="copyToClipboard('#score-only')">Copy Score Only</button>
           <p ></p>
 
         </div>
@@ -122,7 +127,7 @@
               <th>Engagement Score:</th>
               <th><strong>Total Lead Score:</strong></th>
             </tr>
-            <tr>
+            <tr id="prospect-for-sheet">
               <td class="name-output"></td>
               <td class="company-output"></td>
               <td class="role-output"></td>
@@ -133,6 +138,7 @@
               <td class="score-output"></td>
             </tr>
           </table>
+          <button onclick="copyToClipboard('#prospect-for-sheet')">Copy to Clipboard</button>
         </div>
       </div>
       <!-- column total and checkout -->
